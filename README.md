@@ -1,1 +1,1 @@
-Repositorio-Escola-de-Tecnologia_Vida-Nova
+Repositorio-Escola-de-Tecnologia-Vida-Nova
