@@ -1,3 +1,1 @@
-
-MEU PRIMEIRO CONTATO COM GIT na escola de tecnologia vida nova e quero aprender muito.
-Alteração feita com sucesso.
+Meu primeiro contato com o git na Escola de Tecnologia Vida Nova e quero aprender muito.
