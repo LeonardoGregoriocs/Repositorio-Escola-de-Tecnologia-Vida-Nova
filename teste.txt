@@ -1,4 +1,5 @@
 MEU PRIMEIRO CONTATO COM GIT
 Na Escola de Tecnologia Vida Nova e quero aprender muito.
-Simulando uma alteração feita pelo professor.
+Simulando uma alteração feita por mim e pelo professor.
+
 
