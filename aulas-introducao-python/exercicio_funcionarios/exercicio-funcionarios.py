@@ -40,8 +40,21 @@ def calculoImpostoDeRenda(salario: float):
         elif salario > 4664.68:
             print('\nSeu salário líquido é de: ', salario - (salario * 0.275))
 
+while True: 
+    print('\nBem-vindo!\n\n1)Dados Pessoais \n2)Calcular Imposto de Renda\n3)Digite 0 para fechar o programa\n')
+    operacao = int(input('Favor selecionar a opção desejada: '))
+    os.system('cls')
 
-var1 = dadosPessoais()
-informacoesFuncionario(var1[0], var1[1], var1[2])
-var2 = salarioFuncionario()
-calculoImpostoDeRenda(salario)
+    if(operacao == 1): 
+        var1 = dadosPessoais()
+        informacoesFuncionario(var1[0], var1[1], var1[2])
+        var2 = salarioFuncionario()
+        calculoImpostoDeRenda(salario)
+
+    elif(operacao == 2):
+        var2 = salarioFuncionario()
+        calculoImpostoDeRenda(salario)
+
+    elif(operacao == 0):
+        print('Seu programa foi encerrado, você digitou 0!')
+        break
