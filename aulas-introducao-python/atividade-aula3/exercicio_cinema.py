@@ -35,13 +35,10 @@ while(y < len(assentos)):
     lugarNoCinema = (fila-1)*10+(dicionario[coluna])
     
     if(assentos[lugarNoCinema-1] == 'x'):
+        y-=1
         os.system('cls')
         print('A CADEIRA ESTÁ OCUPADA! ESCOLHA OUTRO LUGAR: ')
+    y+=1
 
     assentos[lugarNoCinema-1] = 'x'
-
-    if(lugarNoCinema == quantidade_assentos):
-        os.system('cls')
-        print('\t-- CINEMA LOTADO -- \n A SESSÃO IRÁ COMEÇAR.. BOM FILME! \n')
-        break
-    
+print('\t-- CINEMA LOTADO -- \n A SESSÃO IRÁ COMEÇAR.. BOM FILME! \n')
