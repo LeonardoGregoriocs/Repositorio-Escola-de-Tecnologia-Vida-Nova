@@ -14,7 +14,7 @@ def informacoesFuncionario(nome, sobrenome, cargo):
 def salarioFuncionario() -> None:
     salario = (input('\nDigite seu salário para calcularmos seu imposto de renda: '))
 
-while(1 < 10):
-    var1 = dadosPessoais()
-    informacoesFuncionario(var1[0], var1[1], var1[2])
-    var2 = salarioFuncionario()
+
+var1 = dadosPessoais()
+informacoesFuncionario(var1[0], var1[1], var1[2])
+var2 = salarioFuncionario()
