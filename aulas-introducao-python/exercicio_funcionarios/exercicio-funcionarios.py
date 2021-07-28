@@ -51,7 +51,6 @@ while True:
         var2 = salarioFuncionario()
         calculoImpostoDeRenda(salario)
     
-
     elif(operacao == 2):
         print("Favor informar seus dados pessoais para darmos andamento no calculo do imposto de renda: ")
         var1 = dadosPessoais()
