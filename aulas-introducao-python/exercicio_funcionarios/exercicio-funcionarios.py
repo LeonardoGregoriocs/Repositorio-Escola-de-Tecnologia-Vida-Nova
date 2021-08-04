@@ -42,7 +42,8 @@ def calculoImpostoDeRenda(salario: float):
 
 
 while True: 
-    print('\nBem-vindo!\n\n1)Dados Pessoais \n2)Calcular Imposto de Renda\n3)Digite 0 para fechar o programa\n')
+    print('#', '-' *70, '#')
+    print('\t\t\t\tBem-vindo!\n\n1)Dados Pessoais \n2)Calcular Imposto de Renda\n3)Digite 0 para fechar o programa\n')
     operacao = int(input('Favor selecionar a opção desejada: '))
     os.system('cls')
 
@@ -58,4 +59,3 @@ while True:
 
     elif(operacao == 0):
         print('Seu programa foi encerrado, você digitou 0!')
-        break
