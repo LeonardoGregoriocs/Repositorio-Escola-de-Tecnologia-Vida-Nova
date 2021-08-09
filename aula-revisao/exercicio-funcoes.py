@@ -39,7 +39,7 @@ def main() -> None:
     print("A soma dos três números é: ", sum)
 
     calculate = calculate_avg (number1, number2, number3)
-    print("A média é: ", calculate)
+    print("A média é: %.2f " %calculate)
 
     bigger_or_equal(number1, number2)
 
