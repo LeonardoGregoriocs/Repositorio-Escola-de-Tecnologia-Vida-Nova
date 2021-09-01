@@ -3,13 +3,13 @@
 
 class Carro: 
 
-    def __init__(self, marca: str, modelo: str, ano: int, chassi: str, placa: str, cor: str) -> None: 
-        self.marca = marca
-        self.modelo = modelo
-        self.ano = ano
-        self.chassi = chassi
-        self.placa = placa
-        self.cor = cor
+    def __init__(self) -> None:
+        self.marca = input('Digite a marca do carro: ')
+        self.modelo = input('Digite o modelo do carro: ')
+        self.ano = int(input('Digite o ano do carro: '))
+        self.chassi = input('Digite o chassi do carro: ')
+        self.placa = input('Digite a placa do carro: ')
+        self.cor =  input('Digite a cor do carro: ')
 
     def print(self): 
         print('\n#------------------------#')
@@ -21,6 +21,4 @@ class Carro:
         print(f'Chassi:',self.chassi)
         print(f'Placa:',self.placa)
         print(f'Cor:', self.cor)
-    
-
-
+        
