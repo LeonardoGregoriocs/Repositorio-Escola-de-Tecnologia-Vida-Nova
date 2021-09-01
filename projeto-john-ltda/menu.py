@@ -6,8 +6,6 @@ lista_de_carro = []
 
 while True:
 
-    os.system('cls')
-
     print('#------------------------#   \n1)Criar um veículo \n2)Ver lista de carro: ')
     opcao = int(input('\nDigite a opção desejada: '))
     
