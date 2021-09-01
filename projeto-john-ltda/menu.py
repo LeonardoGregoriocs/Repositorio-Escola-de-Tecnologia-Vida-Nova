@@ -5,8 +5,8 @@ from motorista import Motoristas
 lista_de_carro = []
 
 while True:
-
-    print('#------------------------#   \n1)Criar um veículo \n2)Ver lista de carro: ')
+    
+    print('\n#------------------------#   \n1)Criar um veículo \n2)Ver lista de carro: ')
     opcao = int(input('\nDigite a opção desejada: '))
     
     os.system('cls')
