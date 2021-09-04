@@ -17,7 +17,7 @@ while True:
 
     elif(opcao == 2):
         x = int(input('Qual a posição do veículo deseja visualizar: '))
-        print(lista_de_carro[x-1].print())
+        lista_de_carro[x-1] = carro.print()
 
     elif(opcao == 3):
         x = int(input('Qual a posição do veículo deseja excluir: '))
@@ -25,6 +25,5 @@ while True:
 
     elif(opcao == 4):
         x = int(input('Qual a posição do veículo que deseja alterar a cor: '))
-        lista_de_carro[x-1]
-        carro.trocar_cor()
+        lista_de_carro[x-1] = carro.trocar_cor()
         
