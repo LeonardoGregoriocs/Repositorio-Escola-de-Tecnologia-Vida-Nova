@@ -21,4 +21,6 @@ class Carro:
         print(f'Chassi:',self.chassi)
         print(f'Placa:',self.placa)
         print(f'Cor:', self.cor)
-        
+
+    def trocar_cor(self):
+        self.cor = input('Digite a cor desejada: ')
