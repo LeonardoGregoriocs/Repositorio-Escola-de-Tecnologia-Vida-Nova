@@ -13,7 +13,7 @@ class Motoristas:
         print('#------------------------#')
         print('DADOS DO MOTORISTA:')
         print('#------------------------#\n')
-        print(f'Nome do cliente:',self.nome)
+        print(f'Nome do motorista:',self.nome)
         print(f'CPF:',self.cpf)
         print(f'Data de nascimento:',self.data_de_nascimento)
         print(f'Número da CNH:',self.numero_cnh )
@@ -22,4 +22,3 @@ class Motoristas:
 
     def trocar_nome(self):
         self.nome = input('Digite o novo nome: ')
-        
