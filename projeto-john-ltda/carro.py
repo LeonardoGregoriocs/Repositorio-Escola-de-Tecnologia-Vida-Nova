@@ -11,7 +11,7 @@ class Carro:
         self.placa = input('Digite a placa do carro: ')
         self.cor =  input('Digite a cor do carro: ')
 
-    def print(self) -> None:
+    def print_carro(self) -> None:
         print('#------------------------#')
         print('DADOS DO VEÍCULO:')
         print('#------------------------#')

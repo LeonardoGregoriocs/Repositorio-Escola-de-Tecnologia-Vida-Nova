@@ -9,7 +9,7 @@ class Motoristas:
         self.classe = input('Digite a classe da sua CNH: ')
         self.data_emissao = input('Digite a data de emissão: ')
 
-    def print(self): 
+    def print_motorista(self): 
         print('#------------------------#')
         print('DADOS DO MOTORISTA:')
         print('#------------------------#\n')
@@ -19,4 +19,7 @@ class Motoristas:
         print(f'Número da CNH:',self.numero_cnh )
         print(f'Categoria da CNH:',self.classe)
         print(f'Data de emissão da CNH:',self.data_emissao)
+
+    def trocar_nome(self):
+        self.nome = input('Digite o novo nome: ')
 
