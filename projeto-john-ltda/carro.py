@@ -3,6 +3,14 @@
 
 class Carro: 
 
+    def validacoes_numeros(x):
+        while True:
+            try:
+                x 
+                break
+            except ValueError:
+                print('DIGITE UM ANO VALIDO')
+
     def __init__(self) -> None:
         self.marca = input('Digite a marca do carro: ')
         self.modelo = input('Digite o modelo do carro: ')

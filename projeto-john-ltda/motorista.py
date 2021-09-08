@@ -22,4 +22,4 @@ class Motoristas:
 
     def trocar_nome(self):
         self.nome = input('Digite o novo nome: ')
-
+        
