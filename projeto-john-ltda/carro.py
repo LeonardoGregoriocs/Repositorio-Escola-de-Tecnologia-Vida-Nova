@@ -12,9 +12,9 @@ class Carro:
         self.cor =  input('Digite a cor do carro: ')
 
     def print(self) -> None:
-        print('\n#------------------------#')
+        print('#------------------------#')
         print('DADOS DO VEÍCULO:')
-        print('#------------------------#\n')
+        print('#------------------------#')
         print(f'Marca:', self.marca)
         print(f'Modelo:', self.modelo)
         print(f'Ano:',self.ano)

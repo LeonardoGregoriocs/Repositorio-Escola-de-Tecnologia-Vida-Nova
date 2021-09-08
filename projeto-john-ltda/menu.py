@@ -1,4 +1,3 @@
-import os
 from carro import Carro
 from motorista import Motoristas
 
@@ -26,8 +25,8 @@ while True:
         x = int(input('Qual a posição do veículo que deseja alterar a cor: '))
         lista_de_carro[x-1] = carro.trocar_cor()
 
-    #elif(opcao == 0): 
-    #    break
+    elif(opcao == 0): 
+        break
 
     else:
         print('Digite um número válido!')
