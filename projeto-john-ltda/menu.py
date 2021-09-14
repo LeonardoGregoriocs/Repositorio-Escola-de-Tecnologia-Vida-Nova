@@ -8,7 +8,7 @@ lista_de_motorista = []
 def menu_carro():
     while True:
         print('\n#------------------------# PROJETO JOHN-LTDA #------------------------#')
-        print('\n1) Criar um veículo: \n2) Ver lista de veículo: \n3) Remover um veículo: \n4) Mudar a cor do carro: \n9)Menu Principal \n\n-> Digite zero para sair do programa\n')
+        print('\n1) Criar um veículo: \n2) Ver lista de veículo: \n3) Remover um veículo: \n4) Mudar a cor do carro: \n9) Menu Principal \n\n-> Digite zero para sair do programa\n')
         print('#-----------------------------------------------------------------------#')
         opcao = int(input('\nDigite a opção desejada: '))
 
@@ -82,7 +82,7 @@ def menu_motorista():
 def menu_principal():          
     while True: 
         print('\n#------------------------# PROJETO JOHN-LTDA #------------------------#')
-        print('\n 1) Criar um veículo \n 2) Criar um motorista \n\n-> Digite zero para sair do programa ')
+        print('\n 1) Menu veículo \n 2) Menu motorista \n\n-> Digite zero para sair do programa ')
         print('#-----------------------------------------------------------------------#')
         escolha = int(input('\nDigite a opção desejada: '))
 

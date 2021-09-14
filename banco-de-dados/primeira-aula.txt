@@ -1,0 +1,30 @@
+13/09 - Aula 1 "Banco de Dados"
+
+- O que é SQL?
+- Por que banco de dados? 
+- Tipos de banco de dados: relacional x não relacional.
+
+SQL - Linguagem de pesquisa/consulta declarativa padrão para banco de dados relacional. Linguagem universal. Existe vários tipos de banco de dados, porém a maioria usa a linguagem sql, podendo alguns bancos ter suas particularidades. 
+
+Aplicações geram valor para as pessoas por automatizar tarefas manuais e trazer perspectivas sobre os dados de forma dinâmica. 
+
+Precisamos armazenar esses dados em algum lugar.
+
+Sigla ACID: 
+
+    Atomicidade -> Garante que terá as operações executadas, ou seja, ou irá dar certo ou teremos algum erro. Banco de dados garante que terá sucesso ou falha. Após a transação teremos commit ou rollback. (Dentro do banco de dados).
+    Ex: Transferência de valores entre contas bancárias. 
+
+    Consistência -> Deve levar de um estado consistente a um outro estado consistente, ou seja, o banco de dados deve respeitar algumas regras.
+    Podemos criar regras para não ter dados repetidos ou dados invalidos, como numeros a mais no CPF, entre outros.
+
+    Isolamento -> Evita com que transações paralelas interfiram uma na outra. 
+    Existe um log para bloquear aquele dado enquanto estava fazendo alguma alteração. Isola o dado. 
+
+    Durabilidade -> Armazena os dados e garante que serão salvos. Mesmo que ocorra uma queda de energia no segundo seguinte do salvamento. 
+
+Tipos de banco de dados: 
+
+    -> Relacional: Os dados são armazenados em tabela. Para recuperar uma informação podemos precisar relacionar mais de uma tabela. Tem maior controle dos elementos da sigla ACID. 
+
+    -> Não-Relacional: Geralmente utilizado para grandes quantidades de dados. 
