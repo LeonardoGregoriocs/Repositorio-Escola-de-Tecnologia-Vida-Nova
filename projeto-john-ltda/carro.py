@@ -1,6 +1,3 @@
-# Caracteristicas do carro: marca, modelo, ano, chassi e cor. 
-#  CRUD - CRIAR / LER / ATUALIZAR / REMOVER 
-
 class Carro: 
 
     def __init__(self) -> None:
