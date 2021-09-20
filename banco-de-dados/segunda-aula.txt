@@ -1,0 +1,22 @@
+Segunda-Aula 12/09
+
+DML -Data Manipulation Language (Linguagem de Manipulação de Dados)
+
+Comandos:
+
+    CREATE TABLE - CRIAR TABELA
+    CREATE TABLE (PARAMETROS DA TABELA EX: NOME VARCHAR(15))
+
+    INSERT INTO ... VALEUS - ADICIONAR INFORMAÇÕES
+    INSERT INFO "nome da tabela" VALEUS (Os dados, conforme os parametros passados no CREATE TABLE - EX: Leonardo)
+
+    DELETE FROM - Deletar a tabela
+    DELETE FROM "nome da tabela"
+
+    SELECT - Usamos para realizar buscas na tabela. 
+
+    SELECT * FROM "nome da tabela" - Retorna todas as informacoes da tabela solicitada. 
+
+    SELECT * FROM carro WHERE cor = 'branco' AND  cor = 'vermelho' - O WHERE nos ajuda a buscar por algo espefico, dentro da tabela carro, quero filtrar a cor = x "Passamos os paramentros". 
+
+    
