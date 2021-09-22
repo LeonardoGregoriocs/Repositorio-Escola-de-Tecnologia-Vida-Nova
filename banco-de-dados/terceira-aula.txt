@@ -1,0 +1,130 @@
+Primary Key -> Chave primária. Não pode se repetir. 
+Unique Key -> Torna o atributo unico. 
+Foreing Key -> Chave estrangeira.
+
+Order by -> Ordenar do mais antigo pro mais novo, ou do mais novo pro mais antigo. Ex. Extrato banco, lançamentos.
+Group by -> Descobre a quantidade de um elemento em determinado atributo. Ex: pesquisar a quantidade de carros de cada cor.
+Having -> É um "where" dentro do group by. Podemos passar algumas condicoes para essa clausula. Ex: pesquisar a quantidade de carros de cada cor, somente os que tem > 2.
+Indices -> Utilizado para ajudar nas pesquisas. Melhora a performance.
+
+CREATE TABLE cor (
+   id_cor varchar(30) NOT NULL,
+   descricao VARCHAR(30) NOT NULL,
+   PRIMARY KEY (id_cor)
+);
+
+insert into cor values ('1', 'AZUL');
+insert into cor values ('2', 'VERMELHO');
+insert into cor values ('3', 'BRANCO');
+insert into cor values ('4', 'PRETO');
+
+CREATE TABLE marca (
+   id_marca varchar(30) NOT NULL,
+   descricao VARCHAR(30) NOT NULL,
+   PRIMARY KEY (id_marca)
+);
+
+insert into marca values ('1', 'CHEVROLET');
+insert into marca values ('2', 'VOLKSWAGEN');
+insert into marca values ('3', 'HYUNDAI');
+insert into marca values ('4', 'FIAT');
+insert into marca values ('5', 'FORD');
+
+CREATE TABLE modelo (
+   id_modelo varchar(30) NOT NULL,
+   descricao VARCHAR (30) NOT NULL,
+   id_marca varchar(30) NOT NULL,
+   PRIMARY KEY (id_modelo),
+   FOREIGN KEY (id_marca) REFERENCES marca (id_marca)
+);
+
+insert into modelo VALUES ('1', 'GOL', '2');
+insert into modelo VALUES ('2', 'PALIO', '4');
+insert into modelo VALUES ('3', 'KA', '5');
+insert into modelo VALUES ('4', 'FUSION', '5');
+insert into modelo VALUES ('5', 'POLO', '2');
+
+create table carro (
+id_carro varchar(30) NOT NULL,
+    cor_id VARCHAR(30) NOT NULL,
+    modelo_id VARCHAR(30) NOT NULL,
+    placa VARCHAR(10) NOT NULL,
+    data_cadastro DATE,
+    PRIMARY key (id_carro),
+    CONSTRAINT fk_cor_id_cor FOREIGN key (cor_id) REFERENCES cor (id_cor),
+    CONSTRAINT fk_modelo_id_modelo FOREIGN key (modelo_id) REFERENCES modelo (id_modelo),
+    UNIQUE (placa)
+);
+
+insert into carro (id_carro, cor_id, modelo_id, placa, data_cadastro) values ('1', '1', '1', 'FYD-7456', '2021-09-20');
+insert into carro (id_carro, cor_id, modelo_id, placa, data_cadastro) values ('2', '3', '4', 'FYD-7845', '2021-09-19');
+insert into carro (id_carro, cor_id, modelo_id, placa, data_cadastro) values ('3', '3', '1', 'DDD-7915', '2021-09-18');
+insert into carro (id_carro, cor_id, modelo_id, placa, data_cadastro) values ('4', '3', '5', 'DSD-7845', '2020-09-05');
+insert into carro (id_carro, cor_id, modelo_id, placa, data_cadastro) values ('5', '1', '5', 'DSD-8888', '2021-09-20');
+
+
+
+---------------------------------------->
+
+SELECT COUNT (ca.id_carro),
+		co.descricao
+FROM carro ca, 
+	 cor co
+WHERE ca.cor_id = co.id_cor
+GROUP BY ca.cor_id, co.descricao;
+
+---------------------------------------->
+
+SELECT COUNT (md.id_carro),
+		me.descricao
+FROM carro md,
+	 modelo me
+where md.modelo_id = me.id_modelo
+GROUP BY md.modelo_id, me.descricao;
+
+---------------------------------------->
+
+SELECT ca.id_carro,
+	co.descricao as descricao_modelo,
+    ci.descricao AS descricao_marca
+from carro ca,
+	modelo co,
+    marca ci
+where ca.modelo_id = co.id_modelo and 
+      co.id_marca = ci.id_marca;
+
+---------------------------------------->
+
+SELECt ca.id_carro,
+	co.descricao as descricao_modelo,
+    ci.descricao AS descricao_marca,
+    ce.descricao as descricao_cor
+from carro ca,
+	modelo co,
+    marca ci,
+    cor ce
+where ca.modelo_id = co.id_modelo and 
+	  ca.cor_id = ce.id_cor and
+      co.id_marca = ci.id_marca;
+
+---------------------------------------->
+
+SELECT lo.id_locacao, 
+	   ce.nome AS nome_cliente, 
+       ci.descricao as carro_alugado,
+       ma.descricao as descricao_marca
+FROM locacao lo, 
+	 clientes ce,
+     modelo ci,
+     carro ca,
+     marca ma
+WHERE lo.cliente_id = ce.id_clientes and 
+	  lo.carro_id = ca.id_carro and 
+      ca.modelo_id = ci.id_modelo AND
+      ci.id_marca = ma.id_marca
+
+---------------------------------------->
+
+
+
+
